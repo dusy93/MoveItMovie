@@ -8,8 +8,27 @@
 import Foundation
 import Alamofire
 
+fileprivate let KOBIS_URL = "http://www.kobis.or.kr/kobisopenapi/webservice/rest%@.json"
+
 public func getURLs(_ serviceMode: ServiceMode) -> String {
     
-    return ""
+    switch serviceMode {
+    case .Daily:
+        return String(format: KOBIS_URL, ParamsConstant.DailyBoxOffice.rawValue)
+    case .Weekly:
+        return String(format: KOBIS_URL, ParamsConstant.WeeklyBoxOffice.rawValue)
+    case .MovieList:
+        return String(format: KOBIS_URL, ParamsConstant.MovieList.rawValue)
+    case .MovieInfo:
+        return String(format: KOBIS_URL, ParamsConstant.MovieInfo.rawValue)
+    case .CompanyList:
+        return String(format: KOBIS_URL, ParamsConstant.CompanyList.rawValue)
+    case .CompanyInfo:
+        return String(format: KOBIS_URL, ParamsConstant.CompanyInfo.rawValue)
+    case .PeopleList:
+        return String(format: KOBIS_URL, ParamsConstant.PeopleList.rawValue)
+    case .PeopleInfo:
+        return String(format: KOBIS_URL, ParamsConstant.PeopleInfo.rawValue)
+    }
 }
 

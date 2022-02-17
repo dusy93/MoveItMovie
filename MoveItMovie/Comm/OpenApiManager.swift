@@ -8,6 +8,8 @@
 import Foundation
 import Alamofire
 
+fileprivate let API_KEY = "9bf4e66436423c24f21ca6b64068f1ba"
+
 class OpenApiManager: NSObject {
     
     static let sharedInstance: OpenApiManager = {
@@ -19,34 +21,41 @@ class OpenApiManager: NSObject {
         super.init()
     }
     
-    open func requestData(Params param: Any? = nil,
+    open func requestData(Params param: Parameters = [:],
                           ServiceMode serviceMode: ServiceMode = .Daily,
                           Completion completion: @escaping ((_ data: Data) -> Void),
-                          FailError failError: @escaping (() -> Void)) {
+                          FailError failError: @escaping ((_ errorCode: String) -> Void)) {
         
-        AF.request("http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json", method: .get, parameters: param as? Parameters)
+        var parameter = param
+        parameter.updateValue(API_KEY, forKey: "key")
+        
+        AF.request(getURLs(serviceMode), method: .get, parameters: parameter)
             .validate()
             .responseData(queue: .main, completionHandler: { response in
                 switch response.result {
                 case .success(_):
-                    print("aaa")
+                    print("response success")
+                    
                     guard let data = response.value else {
-                        failError()
+                        failError("data")
                         return
                     }
+                    
                     completion(data)
                 case .failure(let error):
-                    print("bbb \(error)")
-                    failError()
+                    print("response failure \(error)")
+                    
+                    failError("response")
                 }
             })
-        
     }
-    
-    open func requestDailyBoxOfficeList(Params param: Any? = nil,
+}
+
+extension OpenApiManager {
+    open func requestDailyBoxOfficeList(Params param: Parameters = [:],
                                         ServiceMode serviceMode: ServiceMode = .Daily,
                                         Completion completion: @escaping ((_ data: Data) -> Void),
-                                        FailError failError: @escaping (() -> Void)) {
+                                        FailError failError: @escaping ((_ errorCode: String) -> Void)) {
         
         OpenApiManager.sharedInstance.requestData(Params: param, ServiceMode: serviceMode, Completion: completion, FailError: failError)
     }
