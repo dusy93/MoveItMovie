@@ -1,0 +1,6 @@
+module Pods_MoveItMovie_MoveItMovieUITests {
+  umbrella header "Pods-MoveItMovie-MoveItMovieUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

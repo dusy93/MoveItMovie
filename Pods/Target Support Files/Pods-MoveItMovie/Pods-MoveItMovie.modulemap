@@ -1,0 +1,6 @@
+module Pods_MoveItMovie {
+  umbrella header "Pods-MoveItMovie-umbrella.h"
+
+  export *
+  module * { export * }
+}
