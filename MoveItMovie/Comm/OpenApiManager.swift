@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-fileprivate let API_KEY = "9bf4e66436423c24f21ca6b64068f1ba"
+let API_KEY = "9bf4e66436423c24f21ca6b64068f1ba"
 
 class OpenApiManager: NSObject {
     
@@ -21,10 +21,10 @@ class OpenApiManager: NSObject {
         super.init()
     }
     
-    open func requestData(Params param: Parameters = [:],
-                          ServiceMode serviceMode: ServiceMode = .Daily,
-                          Completion completion: @escaping ((_ data: Data) -> Void),
-                          FailError failError: @escaping ((_ errorCode: String) -> Void)) {
+    func requestData(Params param: Parameters = [:],
+                     ServiceMode serviceMode: ServiceMode = .Daily,
+                     Completion completion: @escaping ((_ data: Data) -> Void),
+                     FailError failError: @escaping ((_ errorCode: String) -> Void)) {
         
         var parameter = param
         parameter.updateValue(API_KEY, forKey: "key")
