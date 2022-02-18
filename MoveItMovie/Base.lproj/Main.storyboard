@@ -16,70 +16,8 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6Q-HV-4jo">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJ6-vn-sM3">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUW-S7-ds4">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iq6-6Q-JY0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="400" id="BQO-gJ-1OM"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGF-Jp-wg7">
-                                                        <rect key="frame" x="0.0" y="400" width="414" height="500"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="500" id="DBJ-WA-2bs"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="VGF-Jp-wg7" secondAttribute="bottom" id="29x-K9-1Do"/>
-                                                    <constraint firstAttribute="trailing" secondItem="VGF-Jp-wg7" secondAttribute="trailing" id="DHJ-wc-v0L"/>
-                                                    <constraint firstAttribute="trailing" secondItem="iq6-6Q-JY0" secondAttribute="trailing" id="ZjX-tq-M9w"/>
-                                                    <constraint firstItem="iq6-6Q-JY0" firstAttribute="top" secondItem="UUW-S7-ds4" secondAttribute="top" id="Zof-ez-xwF"/>
-                                                    <constraint firstItem="VGF-Jp-wg7" firstAttribute="leading" secondItem="UUW-S7-ds4" secondAttribute="leading" id="grY-30-aI7"/>
-                                                    <constraint firstItem="VGF-Jp-wg7" firstAttribute="top" secondItem="iq6-6Q-JY0" secondAttribute="bottom" id="qOV-lX-qfl"/>
-                                                    <constraint firstItem="iq6-6Q-JY0" firstAttribute="leading" secondItem="UUW-S7-ds4" secondAttribute="leading" id="uos-PS-Juz"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="UUW-S7-ds4" firstAttribute="top" secondItem="IJ6-vn-sM3" secondAttribute="top" id="6Xz-Z9-iTW"/>
-                                            <constraint firstAttribute="bottom" secondItem="UUW-S7-ds4" secondAttribute="bottom" id="9Cs-VN-F5c"/>
-                                            <constraint firstItem="UUW-S7-ds4" firstAttribute="leading" secondItem="IJ6-vn-sM3" secondAttribute="leading" id="Byd-pT-Tnk"/>
-                                            <constraint firstAttribute="trailing" secondItem="UUW-S7-ds4" secondAttribute="trailing" id="jRK-1O-RAk"/>
-                                        </constraints>
-                                        <viewLayoutGuide key="contentLayoutGuide" id="vAY-Ki-q1e"/>
-                                        <viewLayoutGuide key="frameLayoutGuide" id="ktu-dA-lpd"/>
-                                    </scrollView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="IJ6-vn-sM3" firstAttribute="top" secondItem="u6Q-HV-4jo" secondAttribute="top" id="7Ea-pr-9Md"/>
-                                    <constraint firstItem="IJ6-vn-sM3" firstAttribute="leading" secondItem="u6Q-HV-4jo" secondAttribute="leading" id="Kmt-sT-Aw5"/>
-                                    <constraint firstAttribute="trailing" secondItem="IJ6-vn-sM3" secondAttribute="trailing" id="R2L-bT-Qed"/>
-                                    <constraint firstAttribute="width" secondItem="UUW-S7-ds4" secondAttribute="width" id="Rzz-RV-6F4"/>
-                                    <constraint firstAttribute="bottom" secondItem="IJ6-vn-sM3" secondAttribute="bottom" id="So8-iM-Nm6"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u6Q-HV-4jo" secondAttribute="trailing" id="0X1-XE-xN1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u6Q-HV-4jo" secondAttribute="bottom" id="2rW-xc-bxb"/>
-                            <constraint firstItem="u6Q-HV-4jo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Im1-3y-SPH"/>
-                            <constraint firstItem="u6Q-HV-4jo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="h9f-SZ-8as"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oOx-IC-rEA"/>
                 </viewController>

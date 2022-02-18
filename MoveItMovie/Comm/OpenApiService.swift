@@ -9,6 +9,7 @@ import Foundation
 import Alamofire
 
 fileprivate let KOBIS_URL = "http://www.kobis.or.kr/kobisopenapi/webservice/rest%@.json"
+let API_KEY = "9bf4e66436423c24f21ca6b64068f1ba"
 
 public func getURLs(_ serviceMode: ServiceMode) -> String {
     

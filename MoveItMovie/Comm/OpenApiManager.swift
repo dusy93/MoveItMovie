@@ -8,8 +8,6 @@
 import Foundation
 import Alamofire
 
-let API_KEY = "9bf4e66436423c24f21ca6b64068f1ba"
-
 class OpenApiManager: NSObject {
     
     static let sharedInstance: OpenApiManager = {
