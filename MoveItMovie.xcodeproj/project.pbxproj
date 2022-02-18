@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C4CD01E27BE0FF400480B38 /* ResponceDailyBoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CD01D27BE0FF400480B38 /* ResponceDailyBoxOffice.swift */; };
+		0C4CD02A27BE2C7900480B38 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CD02827BE2C7900480B38 /* MainViewController.swift */; };
+		0C4CD02B27BE2C7900480B38 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4CD02927BE2C7900480B38 /* MainViewController.xib */; };
+		0C4CD02D27BE3D4500480B38 /* NaverOpenApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CD02C27BE3D4500480B38 /* NaverOpenApiManager.swift */; };
+		0C4CD03027BE490900480B38 /* RequestNaverSearchMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CD02F27BE490900480B38 /* RequestNaverSearchMovie.swift */; };
+		0C4CD03227BE494D00480B38 /* RequestDailyBoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CD03127BE494D00480B38 /* RequestDailyBoxOffice.swift */; };
 		0CA78FEA27BB938100170455 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA78FE927BB938100170455 /* AppDelegate.swift */; };
 		0CA78FEC27BB938100170455 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA78FEB27BB938100170455 /* SceneDelegate.swift */; };
 		0CA78FEE27BB938100170455 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA78FED27BB938100170455 /* ViewController.swift */; };
@@ -17,6 +23,11 @@
 		0CA7900B27BB938200170455 /* MoveItMovieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7900A27BB938200170455 /* MoveItMovieUITests.swift */; };
 		0CA7900D27BB938200170455 /* MoveItMovieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7900C27BB938200170455 /* MoveItMovieUITestsLaunchTests.swift */; };
 		0CA7901B27BBA10C00170455 /* OpenApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7901A27BBA10C00170455 /* OpenApiService.swift */; };
+		0CD165E327BF356900C8E8BC /* ResponceNaverSearchMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD165E227BF356900C8E8BC /* ResponceNaverSearchMovie.swift */; };
+		0CD165F027BF57CD00C8E8BC /*  MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD165EF27BF57CD00C8E8BC /*  MainViewPresenter.swift */; };
+		0CD165F327BF5DA400C8E8BC /* NaverSearchMovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD165F227BF5DA400C8E8BC /* NaverSearchMovieData.swift */; };
+		0CD165F527BF5FFC00C8E8BC /* ApiUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD165F427BF5FFC00C8E8BC /* ApiUtils.swift */; };
+		0CD165F727BF638E00C8E8BC /* DailyBoxOfficeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD165F627BF638E00C8E8BC /* DailyBoxOfficeData.swift */; };
 		0CDE3F8327BC9BD900FB36E2 /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDE3F8227BC9BD900FB36E2 /* CommonUtils.swift */; };
 		0CDE3F8827BCB6DF00FB36E2 /* ParamsConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDE3F8727BCB6DF00FB36E2 /* ParamsConstant.swift */; };
 		0CDE3F8A27BCB75400FB36E2 /* OpenApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDE3F8927BCB75400FB36E2 /* OpenApiManager.swift */; };
@@ -43,6 +54,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C4CD01D27BE0FF400480B38 /* ResponceDailyBoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponceDailyBoxOffice.swift; sourceTree = "<group>"; };
+		0C4CD02827BE2C7900480B38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0C4CD02927BE2C7900480B38 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		0C4CD02C27BE3D4500480B38 /* NaverOpenApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverOpenApiManager.swift; sourceTree = "<group>"; };
+		0C4CD02F27BE490900480B38 /* RequestNaverSearchMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestNaverSearchMovie.swift; sourceTree = "<group>"; };
+		0C4CD03127BE494D00480B38 /* RequestDailyBoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDailyBoxOffice.swift; sourceTree = "<group>"; };
 		0CA78FE627BB938100170455 /* MoveItMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoveItMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CA78FE927BB938100170455 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CA78FEB27BB938100170455 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +74,11 @@
 		0CA7900A27BB938200170455 /* MoveItMovieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveItMovieUITests.swift; sourceTree = "<group>"; };
 		0CA7900C27BB938200170455 /* MoveItMovieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveItMovieUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0CA7901A27BBA10C00170455 /* OpenApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenApiService.swift; sourceTree = "<group>"; };
+		0CD165E227BF356900C8E8BC /* ResponceNaverSearchMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponceNaverSearchMovie.swift; sourceTree = "<group>"; };
+		0CD165EF27BF57CD00C8E8BC /*  MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " MainViewPresenter.swift"; sourceTree = "<group>"; };
+		0CD165F227BF5DA400C8E8BC /* NaverSearchMovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverSearchMovieData.swift; sourceTree = "<group>"; };
+		0CD165F427BF5FFC00C8E8BC /* ApiUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUtils.swift; sourceTree = "<group>"; };
+		0CD165F627BF638E00C8E8BC /* DailyBoxOfficeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBoxOfficeData.swift; sourceTree = "<group>"; };
 		0CDE3F8227BC9BD900FB36E2 /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
 		0CDE3F8727BCB6DF00FB36E2 /* ParamsConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsConstant.swift; sourceTree = "<group>"; };
 		0CDE3F8927BCB75400FB36E2 /* OpenApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenApiManager.swift; sourceTree = "<group>"; };
@@ -99,6 +121,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C4CD01C27BE0FC600480B38 /* Responce */ = {
+			isa = PBXGroup;
+			children = (
+				0C4CD01D27BE0FF400480B38 /* ResponceDailyBoxOffice.swift */,
+				0CD165E227BF356900C8E8BC /* ResponceNaverSearchMovie.swift */,
+			);
+			path = Responce;
+			sourceTree = "<group>";
+		};
+		0C4CD01F27BE1D1F00480B38 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0CDE3F8227BC9BD900FB36E2 /* CommonUtils.swift */,
+				0CD165F427BF5FFC00C8E8BC /* ApiUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0C4CD02027BE1D3B00480B38 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C4CD02827BE2C7900480B38 /* MainViewController.swift */,
+				0C4CD02927BE2C7900480B38 /* MainViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C4CD02127BE1D4800480B38 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0CD165EF27BF57CD00C8E8BC /*  MainViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0C4CD02E27BE48FE00480B38 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				0C4CD02F27BE490900480B38 /* RequestNaverSearchMovie.swift */,
+				0C4CD03127BE494D00480B38 /* RequestDailyBoxOffice.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		0CA78FDD27BB938000170455 = {
 			isa = PBXGroup;
 			children = (
@@ -128,12 +194,14 @@
 				0CA78FEB27BB938100170455 /* SceneDelegate.swift */,
 				0CA78FED27BB938100170455 /* ViewController.swift */,
 				0CA78FEF27BB938100170455 /* Main.storyboard */,
+				0C4CD02027BE1D3B00480B38 /* ViewController */,
+				0C4CD02127BE1D4800480B38 /* Presenter */,
 				0CA7901927BBA0F800170455 /* Comm */,
 				0CDE3F8427BCA90500FB36E2 /* Constant */,
+				0C4CD01F27BE1D1F00480B38 /* Utils */,
 				0CA78FF227BB938200170455 /* Assets.xcassets */,
 				0CA78FF427BB938200170455 /* LaunchScreen.storyboard */,
 				0CA78FF727BB938200170455 /* Info.plist */,
-				0CDE3F8227BC9BD900FB36E2 /* CommonUtils.swift */,
 			);
 			path = MoveItMovie;
 			sourceTree = "<group>";
@@ -158,10 +226,23 @@
 		0CA7901927BBA0F800170455 /* Comm */ = {
 			isa = PBXGroup;
 			children = (
+				0CD165F127BF5D8300C8E8BC /* Data */,
+				0C4CD02E27BE48FE00480B38 /* Request */,
+				0C4CD01C27BE0FC600480B38 /* Responce */,
 				0CA7901A27BBA10C00170455 /* OpenApiService.swift */,
 				0CDE3F8927BCB75400FB36E2 /* OpenApiManager.swift */,
+				0C4CD02C27BE3D4500480B38 /* NaverOpenApiManager.swift */,
 			);
 			path = Comm;
+			sourceTree = "<group>";
+		};
+		0CD165F127BF5D8300C8E8BC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0CD165F227BF5DA400C8E8BC /* NaverSearchMovieData.swift */,
+				0CD165F627BF638E00C8E8BC /* DailyBoxOfficeData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		0CDE3F8427BCA90500FB36E2 /* Constant */ = {
@@ -304,6 +385,7 @@
 			files = (
 				0CA78FF627BB938200170455 /* LaunchScreen.storyboard in Resources */,
 				0CA78FF327BB938200170455 /* Assets.xcassets in Resources */,
+				0C4CD02B27BE2C7900480B38 /* MainViewController.xib in Resources */,
 				0CA78FF127BB938100170455 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,12 +481,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CA7901B27BBA10C00170455 /* OpenApiService.swift in Sources */,
+				0CD165F727BF638E00C8E8BC /* DailyBoxOfficeData.swift in Sources */,
 				0CDE3F8A27BCB75400FB36E2 /* OpenApiManager.swift in Sources */,
 				0CDE3F8327BC9BD900FB36E2 /* CommonUtils.swift in Sources */,
+				0C4CD03027BE490900480B38 /* RequestNaverSearchMovie.swift in Sources */,
+				0CD165F527BF5FFC00C8E8BC /* ApiUtils.swift in Sources */,
 				0CA78FEE27BB938100170455 /* ViewController.swift in Sources */,
+				0C4CD02D27BE3D4500480B38 /* NaverOpenApiManager.swift in Sources */,
 				0CA78FEA27BB938100170455 /* AppDelegate.swift in Sources */,
+				0CD165F027BF57CD00C8E8BC /*  MainViewPresenter.swift in Sources */,
 				0CA78FEC27BB938100170455 /* SceneDelegate.swift in Sources */,
+				0CD165F327BF5DA400C8E8BC /* NaverSearchMovieData.swift in Sources */,
+				0C4CD01E27BE0FF400480B38 /* ResponceDailyBoxOffice.swift in Sources */,
+				0C4CD03227BE494D00480B38 /* RequestDailyBoxOffice.swift in Sources */,
 				0CDE3F8827BCB6DF00FB36E2 /* ParamsConstant.swift in Sources */,
+				0CD165E327BF356900C8E8BC /* ResponceNaverSearchMovie.swift in Sources */,
+				0C4CD02A27BE2C7900480B38 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,13 +684,14 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.yeon.MoveItMovie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeon.MoveItMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -622,13 +715,14 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.yeon.MoveItMovie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeon.MoveItMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -653,7 +747,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.yeon.MoveItMovieTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeon.MoveItMovieTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -679,7 +773,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.yeon.MoveItMovieTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeon.MoveItMovieTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -703,7 +797,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.yeon.MoveItMovieUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeon.MoveItMovieUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -727,7 +821,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.yeon.MoveItMovieUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeon.MoveItMovieUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
