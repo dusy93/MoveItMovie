@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C04B6A527C3678B00F3D548 /* DailyRankCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C04B6A327C3678B00F3D548 /* DailyRankCollectionViewCell.swift */; };
+		0C04B6A627C3678B00F3D548 /* DailyRankCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C04B6A427C3678B00F3D548 /* DailyRankCollectionViewCell.xib */; };
+		0C04B6A927C37B8500F3D548 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C04B6A827C37B8500F3D548 /* UIImageView+.swift */; };
+		0C04B6AB27C37FA400F3D548 /* ColorConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C04B6AA27C37FA400F3D548 /* ColorConstant.swift */; };
+		0C04B6AD27C3814100F3D548 /* ColorSet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C04B6AC27C3814100F3D548 /* ColorSet.plist */; };
 		0C4CD01E27BE0FF400480B38 /* ResponceDailyBoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CD01D27BE0FF400480B38 /* ResponceDailyBoxOffice.swift */; };
 		0C4CD02A27BE2C7900480B38 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CD02827BE2C7900480B38 /* MainViewController.swift */; };
 		0C4CD02B27BE2C7900480B38 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4CD02927BE2C7900480B38 /* MainViewController.xib */; };
@@ -54,6 +59,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C04B6A327C3678B00F3D548 /* DailyRankCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRankCollectionViewCell.swift; sourceTree = "<group>"; };
+		0C04B6A427C3678B00F3D548 /* DailyRankCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyRankCollectionViewCell.xib; sourceTree = "<group>"; };
+		0C04B6A827C37B8500F3D548 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		0C04B6AA27C37FA400F3D548 /* ColorConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstant.swift; sourceTree = "<group>"; };
+		0C04B6AC27C3814100F3D548 /* ColorSet.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ColorSet.plist; sourceTree = "<group>"; };
 		0C4CD01D27BE0FF400480B38 /* ResponceDailyBoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponceDailyBoxOffice.swift; sourceTree = "<group>"; };
 		0C4CD02827BE2C7900480B38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0C4CD02927BE2C7900480B38 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -121,6 +131,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C04B6A227C3676E00F3D548 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0C04B6A327C3678B00F3D548 /* DailyRankCollectionViewCell.swift */,
+				0C04B6A427C3678B00F3D548 /* DailyRankCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0C04B6A727C37B7700F3D548 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0C04B6A827C37B8500F3D548 /* UIImageView+.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		0C4CD01C27BE0FC600480B38 /* Responce */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +169,8 @@
 		0C4CD02027BE1D3B00480B38 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0C04B6A727C37B7700F3D548 /* Base */,
+				0C04B6A227C3676E00F3D548 /* Cell */,
 				0C4CD02827BE2C7900480B38 /* MainViewController.swift */,
 				0C4CD02927BE2C7900480B38 /* MainViewController.xib */,
 			);
@@ -202,6 +231,7 @@
 				0CA78FF227BB938200170455 /* Assets.xcassets */,
 				0CA78FF427BB938200170455 /* LaunchScreen.storyboard */,
 				0CA78FF727BB938200170455 /* Info.plist */,
+				0C04B6AC27C3814100F3D548 /* ColorSet.plist */,
 			);
 			path = MoveItMovie;
 			sourceTree = "<group>";
@@ -249,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				0CDE3F8727BCB6DF00FB36E2 /* ParamsConstant.swift */,
+				0C04B6AA27C37FA400F3D548 /* ColorConstant.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -384,7 +415,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CA78FF627BB938200170455 /* LaunchScreen.storyboard in Resources */,
+				0C04B6A627C3678B00F3D548 /* DailyRankCollectionViewCell.xib in Resources */,
 				0CA78FF327BB938200170455 /* Assets.xcassets in Resources */,
+				0C04B6AD27C3814100F3D548 /* ColorSet.plist in Resources */,
 				0C4CD02B27BE2C7900480B38 /* MainViewController.xib in Resources */,
 				0CA78FF127BB938100170455 /* Main.storyboard in Resources */,
 			);
@@ -480,12 +513,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C04B6A527C3678B00F3D548 /* DailyRankCollectionViewCell.swift in Sources */,
 				0CA7901B27BBA10C00170455 /* OpenApiService.swift in Sources */,
 				0CD165F727BF638E00C8E8BC /* DailyBoxOfficeData.swift in Sources */,
 				0CDE3F8A27BCB75400FB36E2 /* OpenApiManager.swift in Sources */,
 				0CDE3F8327BC9BD900FB36E2 /* CommonUtils.swift in Sources */,
 				0C4CD03027BE490900480B38 /* RequestNaverSearchMovie.swift in Sources */,
 				0CD165F527BF5FFC00C8E8BC /* ApiUtils.swift in Sources */,
+				0C04B6A927C37B8500F3D548 /* UIImageView+.swift in Sources */,
 				0CA78FEE27BB938100170455 /* ViewController.swift in Sources */,
 				0C4CD02D27BE3D4500480B38 /* NaverOpenApiManager.swift in Sources */,
 				0CA78FEA27BB938100170455 /* AppDelegate.swift in Sources */,
@@ -497,6 +532,7 @@
 				0CDE3F8827BCB6DF00FB36E2 /* ParamsConstant.swift in Sources */,
 				0CD165E327BF356900C8E8BC /* ResponceNaverSearchMovie.swift in Sources */,
 				0C4CD02A27BE2C7900480B38 /* MainViewController.swift in Sources */,
+				0C04B6AB27C37FA400F3D548 /* ColorConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
