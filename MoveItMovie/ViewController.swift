@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         let yesterdayDate = Calendar.current.date(byAdding: .day, value: -1, to: Date()) ?? Date()
         
         var parameter: RequestDailyBoxOffice = RequestDailyBoxOffice()
-        parameter.targetDt = convertDateToString(date: yesterdayDate, format: "yyyyMMdd")
+        parameter.targetDt = CommonUtils.convertDateToString(date: yesterdayDate, format: "yyyyMMdd")
         parameter.itemPerPage = "1"
         
         do {

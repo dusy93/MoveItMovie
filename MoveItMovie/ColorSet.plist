@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>default</key>
+	<dict>
+		<key>main</key>
+		<string>FFFFFF</string>
+		<key>image_border</key>
+		<string>F3FAFF</string>
+	</dict>
+</dict>
+</plist>

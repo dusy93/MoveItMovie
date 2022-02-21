@@ -14,6 +14,7 @@ class  MainViewPresenter {
     
     var dailyData: [DailyBoxOfficeData] = []
     var subMovieData: [String:NaverSearchMovieData] = [:]
+    let yesterdayDate = Calendar.current.date(byAdding: .day, value: -1, to: Date()) ?? Date()
     
     init(_ view: MainViewController) {
         viewController = view
@@ -56,7 +57,7 @@ class  MainViewPresenter {
                 }
                 tempItem.movieCd = item.movieCd
                 tempItem.movieName = item.movieNm
-                tempItem.openDate = convertStringToDate(dateString: item.openDt, format: "yyyy-MM-dd")
+                tempItem.openDate = CommonUtils.convertStringToDate(dateString: item.openDt, format: "yyyy-MM-dd")
                 tempItem.totalAudienceCount = Int(item.audiAcc) ?? 0
                 
                 tempDailyData.append(tempItem)
@@ -71,10 +72,9 @@ class  MainViewPresenter {
     
     // MARK: *REQUEST*
     func requestDailyData() {
-        let yesterdayDate = Calendar.current.date(byAdding: .day, value: -2, to: Date()) ?? Date()
         
         var parameter: RequestDailyBoxOffice = RequestDailyBoxOffice()
-        parameter.targetDt = convertDateToString(date: yesterdayDate, format: "yyyyMMdd")
+        parameter.targetDt = CommonUtils.convertDateToString(date: yesterdayDate, format: "yyyyMMdd")
         
         if let param = getParameterJson(parameter: parameter) {
             OpenApiManager.sharedInstance

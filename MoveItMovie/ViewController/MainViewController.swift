@@ -12,9 +12,10 @@ let MAIN = MainViewController.sharedInstance
 
 class MainViewController: UIViewController {
     
-    @IBOutlet var iv_topMovie: UIImageView?
-    @IBOutlet var lb_topMovie: UILabel?
-    @IBOutlet var vi_topNew: UIView?
+    @IBOutlet weak var iv_topMovie: UIImageView?
+    @IBOutlet weak var lb_topMovie: UILabel?
+    @IBOutlet weak var vi_topNew: UIView?
+    @IBOutlet weak var cv_dailyRank: UICollectionView!
     
     var presenter: MainViewPresenter?
     
@@ -34,13 +35,16 @@ class MainViewController: UIViewController {
     
     func initialUI() {
         iv_topMovie?.layer.masksToBounds = true
-        iv_topMovie?.layer.borderWidth = 1.5
-        iv_topMovie?.layer.borderColor = UIColor.white.cgColor
+        iv_topMovie?.layer.borderWidth = 2
+        iv_topMovie?.layer.borderColor = CommonUtils.getColor(key: .IMAGE_BORDER).cgColor
         iv_topMovie?.layer.cornerRadius = 5
         
-        vi_topNew?.layer.borderWidth = 1.5
-        vi_topNew?.layer.borderColor = UIColor.white.cgColor
+        vi_topNew?.layer.borderWidth = 2
+        vi_topNew?.layer.borderColor = CommonUtils.getColor(key: .IMAGE_BORDER).cgColor
         vi_topNew?.layer.cornerRadius = 5
+        
+        let dailyRankCollectionViewCell = UINib(nibName: "DailyRankCollectionViewCell", bundle: nil)
+        cv_dailyRank.register(dailyRankCollectionViewCell, forCellWithReuseIdentifier: "dailyRankCollectionViewCell")
     }
     
     func setUI() {
@@ -50,29 +54,41 @@ class MainViewController: UIViewController {
                 vi_topNew?.isHidden = false
             }
         }
+        cv_dailyRank.reloadData()
     }
     
     func setUIImage() {
         if let mainTopItem = presenter?.getMainTopItem() {
             if let subMovieItem = presenter?.getSubMovieItem(movieName: mainTopItem.movieName) {
-                iv_topMovie?.image = getDownloadImage(imageURL: subMovieItem.imageName)
+                iv_topMovie?.loadImage(subMovieItem.imageName)
             }
         }
+        cv_dailyRank.reloadData()
+    }
+}
+
+extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return presenter?.dailyData.count ?? 0
     }
     
-    func getDownloadImage(imageURL: String) -> UIImage {
-        do {
-            if let url = URL(string: imageURL) {
-                let data = try Data(contentsOf: url)
-                
-                if let uiImage = UIImage(data: data) {
-                    return uiImage
-                }
-            }
-            return UIImage()
-        } catch {
-            print("image error")
-            return UIImage()
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dailyRankCollectionViewCell", for: indexPath) as! DailyRankCollectionViewCell
+        
+        cell.lb_rank.text = ""
+        cell.iv_movie.image = UIImage()
+        
+        guard let item = presenter?.dailyData[indexPath.row], let subItem = presenter?.subMovieData[item.movieName] else {
+            return cell
         }
+        
+        cell.lb_rank.text = "\(indexPath.row+1)"
+        cell.iv_movie.loadImage(subItem.imageName)
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 175, height: 200)
     }
 }
