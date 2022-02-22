@@ -57,4 +57,28 @@ extension OpenApiManager {
         
         OpenApiManager.sharedInstance.requestData(Params: param, ServiceMode: serviceMode, Completion: completion, FailError: failError)
     }
+    
+    open func requestCompanyList(Params param: Parameters = [:],
+                                 ServiceMode serviceMode: ServiceMode = .CompanyList,
+                                 Completion completion: @escaping ((_ data: Data) -> Void),
+                                 FailError failError: @escaping ((_ errorCode: String) -> Void)) {
+        
+        OpenApiManager.sharedInstance.requestData(Params: param, ServiceMode: serviceMode, Completion: completion, FailError: failError)
+    }
+    
+    open func requestCompanyInfo(Params param: Parameters = [:],
+                                 ServiceMode serviceMode: ServiceMode = .CompanyInfo,
+                                 Completion completion: @escaping ((_ data: Data) -> Void),
+                                 FailError failError: @escaping ((_ errorCode: String) -> Void)) {
+        
+        OpenApiManager.sharedInstance.requestData(Params: param, ServiceMode: serviceMode, Completion: completion, FailError: failError)
+    }
+    
+    open func requestMovieInfo(Params param: Parameters = [:],
+                               ServiceMode serviceMode: ServiceMode = .MovieInfo,
+                               Completion completion: @escaping ((_ data: Data) -> Void),
+                               FailError failError: @escaping ((_ errorCode: String) -> Void)) {
+        
+        OpenApiManager.sharedInstance.requestData(Params: param, ServiceMode: serviceMode, Completion: completion, FailError: failError)
+    }
 }

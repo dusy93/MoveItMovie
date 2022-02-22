@@ -11,6 +11,7 @@ import UIKit
 extension UIImageView {
     func loadImage(_ url: String) {
         let cacheKey = NSString(string: url)
+        
         if let cachedImage = ImageCacheManager.shared.object(forKey: cacheKey) {
             self.image = cachedImage
             return
@@ -29,7 +30,7 @@ extension UIImageView {
     }
 }
 
-class ImageCacheManager{
+class ImageCacheManager {
     static let shared = NSCache<NSString, UIImage>()
-    private init (){}
+    private init () {}
 }

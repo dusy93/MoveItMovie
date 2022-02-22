@@ -12,6 +12,7 @@
 		0C04B6A927C37B8500F3D548 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C04B6A827C37B8500F3D548 /* UIImageView+.swift */; };
 		0C04B6AB27C37FA400F3D548 /* ColorConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C04B6AA27C37FA400F3D548 /* ColorConstant.swift */; };
 		0C04B6AD27C3814100F3D548 /* ColorSet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C04B6AC27C3814100F3D548 /* ColorSet.plist */; };
+		0C04B6AF27C39F9F00F3D548 /* ResponceCompanyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C04B6AE27C39F9F00F3D548 /* ResponceCompanyList.swift */; };
 		0C4CD01E27BE0FF400480B38 /* ResponceDailyBoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CD01D27BE0FF400480B38 /* ResponceDailyBoxOffice.swift */; };
 		0C4CD02A27BE2C7900480B38 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CD02827BE2C7900480B38 /* MainViewController.swift */; };
 		0C4CD02B27BE2C7900480B38 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4CD02927BE2C7900480B38 /* MainViewController.xib */; };
@@ -36,6 +37,10 @@
 		0CDE3F8327BC9BD900FB36E2 /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDE3F8227BC9BD900FB36E2 /* CommonUtils.swift */; };
 		0CDE3F8827BCB6DF00FB36E2 /* ParamsConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDE3F8727BCB6DF00FB36E2 /* ParamsConstant.swift */; };
 		0CDE3F8A27BCB75400FB36E2 /* OpenApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDE3F8927BCB75400FB36E2 /* OpenApiManager.swift */; };
+		0CF35EA227C4A8B900B541A9 /* RequestCompanyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF35EA127C4A8B900B541A9 /* RequestCompanyInfo.swift */; };
+		0CF35EA427C4A9BA00B541A9 /* ResponceCompanyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF35EA327C4A9BA00B541A9 /* ResponceCompanyInfo.swift */; };
+		0CF35EA627C4D1F000B541A9 /* ResponcceMovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF35EA527C4D1F000B541A9 /* ResponcceMovieInfo.swift */; };
+		0CF35EA827C4DD8500B541A9 /* RequestMovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF35EA727C4DD8500B541A9 /* RequestMovieInfo.swift */; };
 		5454F0853D1FFC43246E1007 /* libPods-MoveItMovie-MoveItMovieUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F95DCB246D8972919F9EAD5 /* libPods-MoveItMovie-MoveItMovieUITests.a */; };
 		640F343F5FA444675081594D /* libPods-MoveItMovie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC24812E00D973A3FED2D6C /* libPods-MoveItMovie.a */; };
 		68F3B88DAC4CEADA14694B56 /* libPods-MoveItMovieTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3463D6EC2C2EC5BFACB76E5C /* libPods-MoveItMovieTests.a */; };
@@ -64,6 +69,7 @@
 		0C04B6A827C37B8500F3D548 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		0C04B6AA27C37FA400F3D548 /* ColorConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstant.swift; sourceTree = "<group>"; };
 		0C04B6AC27C3814100F3D548 /* ColorSet.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ColorSet.plist; sourceTree = "<group>"; };
+		0C04B6AE27C39F9F00F3D548 /* ResponceCompanyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponceCompanyList.swift; sourceTree = "<group>"; };
 		0C4CD01D27BE0FF400480B38 /* ResponceDailyBoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponceDailyBoxOffice.swift; sourceTree = "<group>"; };
 		0C4CD02827BE2C7900480B38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0C4CD02927BE2C7900480B38 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -92,6 +98,10 @@
 		0CDE3F8227BC9BD900FB36E2 /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
 		0CDE3F8727BCB6DF00FB36E2 /* ParamsConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsConstant.swift; sourceTree = "<group>"; };
 		0CDE3F8927BCB75400FB36E2 /* OpenApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenApiManager.swift; sourceTree = "<group>"; };
+		0CF35EA127C4A8B900B541A9 /* RequestCompanyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCompanyInfo.swift; sourceTree = "<group>"; };
+		0CF35EA327C4A9BA00B541A9 /* ResponceCompanyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponceCompanyInfo.swift; sourceTree = "<group>"; };
+		0CF35EA527C4D1F000B541A9 /* ResponcceMovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponcceMovieInfo.swift; sourceTree = "<group>"; };
+		0CF35EA727C4DD8500B541A9 /* RequestMovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMovieInfo.swift; sourceTree = "<group>"; };
 		0E01F8622C87D8136655B550 /* Pods-MoveItMovieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoveItMovieTests.release.xcconfig"; path = "Target Support Files/Pods-MoveItMovieTests/Pods-MoveItMovieTests.release.xcconfig"; sourceTree = "<group>"; };
 		3463D6EC2C2EC5BFACB76E5C /* libPods-MoveItMovieTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoveItMovieTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC24812E00D973A3FED2D6C /* libPods-MoveItMovie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoveItMovie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +163,9 @@
 			children = (
 				0C4CD01D27BE0FF400480B38 /* ResponceDailyBoxOffice.swift */,
 				0CD165E227BF356900C8E8BC /* ResponceNaverSearchMovie.swift */,
+				0C04B6AE27C39F9F00F3D548 /* ResponceCompanyList.swift */,
+				0CF35EA327C4A9BA00B541A9 /* ResponceCompanyInfo.swift */,
+				0CF35EA527C4D1F000B541A9 /* ResponcceMovieInfo.swift */,
 			);
 			path = Responce;
 			sourceTree = "<group>";
@@ -190,6 +203,8 @@
 			children = (
 				0C4CD02F27BE490900480B38 /* RequestNaverSearchMovie.swift */,
 				0C4CD03127BE494D00480B38 /* RequestDailyBoxOffice.swift */,
+				0CF35EA127C4A8B900B541A9 /* RequestCompanyInfo.swift */,
+				0CF35EA727C4DD8500B541A9 /* RequestMovieInfo.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -514,11 +529,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C04B6A527C3678B00F3D548 /* DailyRankCollectionViewCell.swift in Sources */,
+				0CF35EA427C4A9BA00B541A9 /* ResponceCompanyInfo.swift in Sources */,
 				0CA7901B27BBA10C00170455 /* OpenApiService.swift in Sources */,
 				0CD165F727BF638E00C8E8BC /* DailyBoxOfficeData.swift in Sources */,
+				0CF35EA227C4A8B900B541A9 /* RequestCompanyInfo.swift in Sources */,
 				0CDE3F8A27BCB75400FB36E2 /* OpenApiManager.swift in Sources */,
 				0CDE3F8327BC9BD900FB36E2 /* CommonUtils.swift in Sources */,
 				0C4CD03027BE490900480B38 /* RequestNaverSearchMovie.swift in Sources */,
+				0C04B6AF27C39F9F00F3D548 /* ResponceCompanyList.swift in Sources */,
+				0CF35EA627C4D1F000B541A9 /* ResponcceMovieInfo.swift in Sources */,
 				0CD165F527BF5FFC00C8E8BC /* ApiUtils.swift in Sources */,
 				0C04B6A927C37B8500F3D548 /* UIImageView+.swift in Sources */,
 				0CA78FEE27BB938100170455 /* ViewController.swift in Sources */,
@@ -529,6 +548,7 @@
 				0CD165F327BF5DA400C8E8BC /* NaverSearchMovieData.swift in Sources */,
 				0C4CD01E27BE0FF400480B38 /* ResponceDailyBoxOffice.swift in Sources */,
 				0C4CD03227BE494D00480B38 /* RequestDailyBoxOffice.swift in Sources */,
+				0CF35EA827C4DD8500B541A9 /* RequestMovieInfo.swift in Sources */,
 				0CDE3F8827BCB6DF00FB36E2 /* ParamsConstant.swift in Sources */,
 				0CD165E327BF356900C8E8BC /* ResponceNaverSearchMovie.swift in Sources */,
 				0C4CD02A27BE2C7900480B38 /* MainViewController.swift in Sources */,

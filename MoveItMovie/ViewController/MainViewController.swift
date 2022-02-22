@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var iv_topMovie: UIImageView?
     @IBOutlet weak var lb_topMovie: UILabel?
+    @IBOutlet weak var lb_topMovieSub: UILabel?
     @IBOutlet weak var vi_topNew: UIView?
     @IBOutlet weak var cv_dailyRank: UICollectionView!
     
@@ -34,6 +35,8 @@ class MainViewController: UIViewController {
     }
     
     func initialUI() {
+        lb_topMovieSub?.numberOfLines = 2
+        
         iv_topMovie?.layer.masksToBounds = true
         iv_topMovie?.layer.borderWidth = 2
         iv_topMovie?.layer.borderColor = CommonUtils.getColor(key: .IMAGE_BORDER).cgColor
@@ -61,6 +64,11 @@ class MainViewController: UIViewController {
         if let mainTopItem = presenter?.getMainTopItem() {
             if let subMovieItem = presenter?.getSubMovieItem(movieName: mainTopItem.movieName) {
                 iv_topMovie?.loadImage(subMovieItem.imageName)
+                if !subMovieItem.director.isEmpty || !subMovieItem.actor.isEmpty {
+                    lb_topMovieSub?.text = "감독 : " + subMovieItem.director.replacingOccurrences(of: "|", with: "") + "\n배우 : " + subMovieItem.actor.replacingOccurrences(of: "|", with: ", ")
+                } else {
+                    lb_topMovieSub?.text = ""
+                }
             }
         }
         cv_dailyRank.reloadData()

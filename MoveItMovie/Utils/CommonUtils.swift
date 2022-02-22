@@ -31,10 +31,11 @@ class CommonUtils {
     }
 
     class func LoadPlistFromMainBundle(fileName: String) -> NSMutableDictionary? {
-        let FBundle:Bundle = Bundle(for: self)
+        let FBundle: Bundle = Bundle(for: self)
         let pathReource = FBundle.path(forResource: fileName, ofType: "plist")
         
-        let dictionaryFile:NSMutableDictionary? = NSMutableDictionary (contentsOfFile: pathReource!)
+        let dictionaryFile: NSMutableDictionary? = NSMutableDictionary(contentsOfFile: pathReource!)
+        
         return dictionaryFile
     }
     
@@ -76,7 +77,8 @@ class CommonUtils {
         let dictionaryColor: NSMutableDictionary = bundleFileColorList.object(forKey: "default") as! NSMutableDictionary
         let haxColor: String = dictionaryColor.object(forKey:key.rawValue) as! String
         
-        let color:UIColor = CommonUtils.getHexColor(hex: haxColor)
+        let color: UIColor = CommonUtils.getHexColor(hex: haxColor)
+        
         return color
     }
 }

@@ -22,6 +22,9 @@ class  MainViewPresenter {
     
     func initial() -> Void {
         requestDailyData()
+        requestCompanyListData()
+        requestCompanyInfoData("20173221") // 소니
+        requestMovieInfoData("20210028") // 스파이더맨
     }
     
     // MARK: *FUNCTION*
@@ -93,6 +96,67 @@ class  MainViewPresenter {
         } else {
             print("OpenApiManager param error")
         }
+    }
+    
+    func requestCompanyListData() {
+        
+        OpenApiManager.sharedInstance
+            .requestCompanyList(ServiceMode: .CompanyList) { data in
+                do {
+                    let companyListData = try JSONDecoder().decode(ResponceCompanyList.self, from: data)
+                    print(companyListData.companyListResult)
+                    
+                } catch {
+                    print(error)
+                }
+            } FailError: { errorCode in
+                print("OpenApiManager error \(errorCode)")
+            }
+        
+    }
+    
+    func requestCompanyInfoData(_ companyCode: String) {
+        
+        var parameter: RequestCompanyInfo = RequestCompanyInfo()
+        parameter.companyCd = companyCode
+        
+        if let param = getParameterJson(parameter: parameter) {
+            OpenApiManager.sharedInstance
+                .requestCompanyInfo(Params: param, ServiceMode: .CompanyInfo) { data in
+                    do {
+                        let companyInfoData = try JSONDecoder().decode(ResponceCompanyInfo.self, from: data)
+                        print(companyInfoData.companyInfoResult)
+                        
+                    } catch {
+                        print(error)
+                    }
+                } FailError: { errorCode in
+                    print("OpenApiManager error \(errorCode)")
+                }
+        }
+        
+    }
+    
+    func requestMovieInfoData(_ movieCode: String) {
+        
+        var parameter: RequestMovieInfo = RequestMovieInfo()
+        parameter.movieCd = movieCode
+        
+        if let param = getParameterJson(parameter: parameter) {
+            OpenApiManager.sharedInstance
+                .requestMovieInfo(Params: param, ServiceMode: .MovieInfo) { data in
+                    do {
+                        let movieInfoData = try JSONDecoder().decode(ResponcceMovieInfo.self, from: data)
+                        print(movieInfoData.movieInfoResult)
+                        
+                    } catch {
+                        print(error)
+                    }
+                } FailError: { errorCode in
+                    print("OpenApiManager error \(errorCode)")
+                }
+        }
+        
     }
     
     func requestNaverSearchMovieData(movieName: String) {
