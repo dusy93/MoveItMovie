@@ -23,22 +23,22 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="upW-h3-p4k">
                                 <rect key="frame" x="35" y="0.0" width="140" height="200"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RHe-i1-aM0">
-                                <rect key="frame" x="0.0" y="100" width="170" height="100"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="130"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RHe-i1-aM0">
+                                <rect key="frame" x="0.0" y="95" width="170" height="100"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="190"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="RHe-i1-aM0" firstAttribute="height" secondItem="Zwq-e1-dSO" secondAttribute="height" multiplier="1:2" id="Cnc-WZ-YeX"/>
                             <constraint firstAttribute="trailing" secondItem="RHe-i1-aM0" secondAttribute="trailing" constant="5" id="XTh-lD-KmG"/>
                             <constraint firstAttribute="trailing" secondItem="upW-h3-p4k" secondAttribute="trailing" id="Xnq-Xv-ibc"/>
                             <constraint firstItem="upW-h3-p4k" firstAttribute="top" secondItem="Zwq-e1-dSO" secondAttribute="top" id="np1-V9-ilo"/>
                             <constraint firstItem="upW-h3-p4k" firstAttribute="leading" secondItem="Zwq-e1-dSO" secondAttribute="leading" constant="35" id="o9R-i9-oCe"/>
                             <constraint firstAttribute="bottom" secondItem="upW-h3-p4k" secondAttribute="bottom" id="p1v-kJ-P6e"/>
                             <constraint firstItem="RHe-i1-aM0" firstAttribute="leading" secondItem="Zwq-e1-dSO" secondAttribute="leading" id="peb-Au-FgB"/>
-                            <constraint firstItem="RHe-i1-aM0" firstAttribute="height" secondItem="Zwq-e1-dSO" secondAttribute="height" multiplier="1:2" id="qFa-fy-Cu7"/>
-                            <constraint firstAttribute="bottom" secondItem="RHe-i1-aM0" secondAttribute="bottom" id="uLk-yb-ixH"/>
+                            <constraint firstAttribute="bottom" secondItem="RHe-i1-aM0" secondAttribute="bottom" constant="5" id="uLk-yb-ixH"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -55,7 +55,7 @@
                 <outlet property="iv_movie" destination="upW-h3-p4k" id="98P-hV-P9F"/>
                 <outlet property="lb_rank" destination="RHe-i1-aM0" id="hqf-BQ-noa"/>
             </connections>
-            <point key="canvasLocation" x="468.11594202898556" y="139.62053571428569"/>
+            <point key="canvasLocation" x="467.39130434782612" y="139.28571428571428"/>
         </collectionViewCell>
     </objects>
 </document>

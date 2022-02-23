@@ -12,6 +12,9 @@ let MAIN = MainViewController.sharedInstance
 
 class MainViewController: UIViewController {
     
+    @IBOutlet weak var vi_intro: UIView?
+    @IBOutlet weak var lb_intro: UILabel?
+    
     @IBOutlet weak var vi_topMovieImage: UIView?
     @IBOutlet weak var iv_topMovie: UIImageView?
     @IBOutlet weak var lb_topMovie: UILabel?
@@ -37,6 +40,10 @@ class MainViewController: UIViewController {
     }
     
     func initialUI() {
+        vi_intro?.isHidden = false
+        lb_intro?.text = "Move it!\nMovie!"
+        lb_intro?.textAlignment = .center
+        
         lb_topMovieSub?.numberOfLines = 2
         
         vi_topMovieImage?.addShadowColor()
@@ -73,6 +80,7 @@ class MainViewController: UIViewController {
         }
         cv_dailyRank.reloadData()
         cv_companyRecommend.reloadData()
+        vi_intro?.isHidden = true
     }
 }
 
@@ -81,7 +89,6 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if collectionView == cv_dailyRank {
             return presenter?.dailyData.count ?? 0
         } else if collectionView == cv_companyRecommend {
-            print("@@@presenter?.companyRecommendData.count \(presenter?.companyRecommendData.count)")
             return presenter?.companyRecommendData.count ?? 0
         } else {
             return 0
