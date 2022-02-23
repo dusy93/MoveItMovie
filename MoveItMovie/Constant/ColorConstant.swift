@@ -10,6 +10,8 @@ import Foundation
 public enum ColorKey: String {
     
     case MAIN = "main"
+    case BACKGROUND = "background"
     case IMAGE_BORDER = "image_border"
+    case TEXT_SHADOW = "text_shadow"
     
 }

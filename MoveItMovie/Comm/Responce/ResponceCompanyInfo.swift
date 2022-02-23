@@ -24,7 +24,7 @@ struct ResponceCompanyInfo: Codable {
 
 struct CompanyInfoResult: Codable {
     
-    public var companyInfo: [CompanyInfo]
+    public var companyInfo: CompanyInfo
     public var source: String
     
     enum CodingKeys: String, CodingKey {
@@ -35,7 +35,7 @@ struct CompanyInfoResult: Codable {
     public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
-        companyInfo = (try? values.decode([CompanyInfo].self, forKey: .companyInfo)) ?? []
+        companyInfo = (try values.decode(CompanyInfo.self, forKey: .companyInfo))
         source = (try? values.decode(String.self, forKey: .source)) ?? ""
     }
 }

@@ -15,10 +15,8 @@ class DailyRankCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        iv_movie?.layer.masksToBounds = true
-        iv_movie?.layer.borderWidth = 2
-        iv_movie?.layer.borderColor = CommonUtils.getColor(key: .IMAGE_BORDER).cgColor
-        iv_movie?.layer.cornerRadius = 5
+        iv_movie.addImageBorderColor()
+        lb_rank.addShadowColor()
     }
 
 }

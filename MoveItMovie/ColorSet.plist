@@ -6,8 +6,12 @@
 	<dict>
 		<key>main</key>
 		<string>FFFFFF</string>
+		<key>background</key>
+		<string>151515</string>
 		<key>image_border</key>
 		<string>F3FAFF</string>
+		<key>text_shadow</key>
+		<string>111111</string>
 	</dict>
 </dict>
 </plist>

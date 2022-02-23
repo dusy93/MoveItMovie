@@ -22,6 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = MAIN
         window?.windowScene = scene
         window?.makeKeyAndVisible()
+        window?.backgroundColor = CommonUtils.getColor(key: .BACKGROUND)
+        MAIN.view.backgroundColor = CommonUtils.getColor(key: .BACKGROUND)
         
     }
 
