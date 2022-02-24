@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DailyBoxOfficeData {
+struct BoxOfficeData {
     public var rank: String = ""                // 순위
     public var rankOldAndNew: Int = 0           // 신규진입여부(OLD: 0, NEW: 1)
     public var movieCd: String = ""             // 영화 코드

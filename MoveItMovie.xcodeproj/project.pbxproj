@@ -32,6 +32,8 @@
 		0CA7900B27BB938200170455 /* MoveItMovieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7900A27BB938200170455 /* MoveItMovieUITests.swift */; };
 		0CA7900D27BB938200170455 /* MoveItMovieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7900C27BB938200170455 /* MoveItMovieUITestsLaunchTests.swift */; };
 		0CA7901B27BBA10C00170455 /* OpenApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7901A27BBA10C00170455 /* OpenApiService.swift */; };
+		0CC192E927C7202500ECC9DD /* RequestWeeklyBoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC192E827C7202500ECC9DD /* RequestWeeklyBoxOffice.swift */; };
+		0CC192EB27C74AF400ECC9DD /* ResponceWeeklyBoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC192EA27C74AF400ECC9DD /* ResponceWeeklyBoxOffice.swift */; };
 		0CD165E327BF356900C8E8BC /* ResponceNaverSearchMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD165E227BF356900C8E8BC /* ResponceNaverSearchMovie.swift */; };
 		0CD165F027BF57CD00C8E8BC /*  MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD165EF27BF57CD00C8E8BC /*  MainViewPresenter.swift */; };
 		0CD165F327BF5DA400C8E8BC /* NaverSearchMovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD165F227BF5DA400C8E8BC /* NaverSearchMovieData.swift */; };
@@ -97,6 +99,8 @@
 		0CA7900A27BB938200170455 /* MoveItMovieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveItMovieUITests.swift; sourceTree = "<group>"; };
 		0CA7900C27BB938200170455 /* MoveItMovieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveItMovieUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0CA7901A27BBA10C00170455 /* OpenApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenApiService.swift; sourceTree = "<group>"; };
+		0CC192E827C7202500ECC9DD /* RequestWeeklyBoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestWeeklyBoxOffice.swift; sourceTree = "<group>"; };
+		0CC192EA27C74AF400ECC9DD /* ResponceWeeklyBoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponceWeeklyBoxOffice.swift; sourceTree = "<group>"; };
 		0CD165E227BF356900C8E8BC /* ResponceNaverSearchMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponceNaverSearchMovie.swift; sourceTree = "<group>"; };
 		0CD165EF27BF57CD00C8E8BC /*  MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " MainViewPresenter.swift"; sourceTree = "<group>"; };
 		0CD165F227BF5DA400C8E8BC /* NaverSearchMovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverSearchMovieData.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				0C4CD01D27BE0FF400480B38 /* ResponceDailyBoxOffice.swift */,
+				0CC192EA27C74AF400ECC9DD /* ResponceWeeklyBoxOffice.swift */,
 				0CD165E227BF356900C8E8BC /* ResponceNaverSearchMovie.swift */,
 				0C04B6AE27C39F9F00F3D548 /* ResponceCompanyList.swift */,
 				0CF35EA327C4A9BA00B541A9 /* ResponceCompanyInfo.swift */,
@@ -216,6 +221,7 @@
 				0C4CD03127BE494D00480B38 /* RequestDailyBoxOffice.swift */,
 				0CF35EA127C4A8B900B541A9 /* RequestCompanyInfo.swift */,
 				0CF35EA727C4DD8500B541A9 /* RequestMovieInfo.swift */,
+				0CC192E827C7202500ECC9DD /* RequestWeeklyBoxOffice.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -550,6 +556,7 @@
 				0C4F7F2D27C5CF89004E510C /* ComppanyRecommendData.swift in Sources */,
 				0CDE3F8327BC9BD900FB36E2 /* CommonUtils.swift in Sources */,
 				0C4CD03027BE490900480B38 /* RequestNaverSearchMovie.swift in Sources */,
+				0CC192EB27C74AF400ECC9DD /* ResponceWeeklyBoxOffice.swift in Sources */,
 				0C04B6AF27C39F9F00F3D548 /* ResponceCompanyList.swift in Sources */,
 				0CF35EA627C4D1F000B541A9 /* ResponcceMovieInfo.swift in Sources */,
 				0CF35EAA27C4E36E00B541A9 /* UIView+.swift in Sources */,
@@ -559,6 +566,7 @@
 				0C4F7F2A27C5C865004E510C /* CompanyRecommendCollectionViewCell.swift in Sources */,
 				0C4CD02D27BE3D4500480B38 /* NaverOpenApiManager.swift in Sources */,
 				0CA78FEA27BB938100170455 /* AppDelegate.swift in Sources */,
+				0CC192E927C7202500ECC9DD /* RequestWeeklyBoxOffice.swift in Sources */,
 				0CD165F027BF57CD00C8E8BC /*  MainViewPresenter.swift in Sources */,
 				0CA78FEC27BB938100170455 /* SceneDelegate.swift in Sources */,
 				0CD165F327BF5DA400C8E8BC /* NaverSearchMovieData.swift in Sources */,

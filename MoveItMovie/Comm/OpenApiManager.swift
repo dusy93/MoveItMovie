@@ -58,6 +58,14 @@ extension OpenApiManager {
         OpenApiManager.sharedInstance.requestData(Params: param, ServiceMode: serviceMode, Completion: completion, FailError: failError)
     }
     
+    open func requestWeeklyBoxOfficeList(Params param: Parameters = [:],
+                                         ServiceMode serviceMode: ServiceMode = .Weekly,
+                                         Completion completion: @escaping ((_ data: Data) -> Void),
+                                         FailError failError: @escaping ((_ errorCode: String) -> Void)) {
+        
+        OpenApiManager.sharedInstance.requestData(Params: param, ServiceMode: serviceMode, Completion: completion, FailError: failError)
+    }
+    
     open func requestCompanyList(Params param: Parameters = [:],
                                  ServiceMode serviceMode: ServiceMode = .CompanyList,
                                  Completion completion: @escaping ((_ data: Data) -> Void),

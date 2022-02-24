@@ -1,15 +1,15 @@
 //
-//  ResponceDailyBoxOffice.swift
+//  ResponceWeeklyBoxOffice.swift
 //  MoveItMovie
 //
-//  Created by YEON HWANGBO on 2022/02/17.
+//  Created by YEON HWANGBO on 2022/02/24.
 //
 
 import Foundation
 
-struct ResponceDailyBoxOffice: Codable {
+struct ResponceWeeklyBoxOffice: Codable {
     
-    public var boxOfficeResult: DailyBoxOfficeResult
+    public var boxOfficeResult: WeeklyBoxOfficeResult
     
     enum CodingKeys: String, CodingKey {
         case boxOfficeResult = "boxOfficeResult"
@@ -18,20 +18,22 @@ struct ResponceDailyBoxOffice: Codable {
     public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
-        boxOfficeResult = (try values.decode(DailyBoxOfficeResult.self, forKey: .boxOfficeResult))
+        boxOfficeResult = (try values.decode(WeeklyBoxOfficeResult.self, forKey: .boxOfficeResult))
     }
 }
 
-struct DailyBoxOfficeResult: Codable {
+struct WeeklyBoxOfficeResult: Codable {
     
     public var boxofficeType: String                       // 박스오피스 종류
     public var showRange: String                           // 박스오피스 조회 일자
-    public var dailyBoxOfficeList: [DailyBoxOfficeList]
+    public var yearWeekTime: String                           // 조회일자(xxxx년 xx주)
+    public var weeklyBoxOfficeList: [WeeklyBoxOfficeList]
     
     enum CodingKeys: String, CodingKey {
         case boxofficeType = "boxofficeType"
         case showRange = "showRange"
-        case dailyBoxOfficeList = "dailyBoxOfficeList"
+        case yearWeekTime = "yearWeekTime"
+        case weeklyBoxOfficeList = "weeklyBoxOfficeList"
     }
     
     public init(from decoder: Decoder) throws {
@@ -39,11 +41,12 @@ struct DailyBoxOfficeResult: Codable {
         
         boxofficeType = (try? values.decode(String.self, forKey: .boxofficeType)) ?? ""
         showRange = (try? values.decode(String.self, forKey: .showRange)) ?? ""
-        dailyBoxOfficeList = (try? values.decode([DailyBoxOfficeList].self, forKey: .dailyBoxOfficeList)) ?? []
+        yearWeekTime = (try? values.decode(String.self, forKey: .yearWeekTime)) ?? ""
+        weeklyBoxOfficeList = (try? values.decode([WeeklyBoxOfficeList].self, forKey: .weeklyBoxOfficeList)) ?? []
     }
 }
 
-struct DailyBoxOfficeList: Codable {
+struct WeeklyBoxOfficeList: Codable {
     
     public var rnum: String                 // 순번
     public var rank: String                 // 해당일자의 박스오피스 순위

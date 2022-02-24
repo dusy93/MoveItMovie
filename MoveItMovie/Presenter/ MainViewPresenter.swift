@@ -13,8 +13,9 @@ class  MainViewPresenter {
     unowned let viewController: MainViewController
     
     let yesterdayDate = Calendar.current.date(byAdding: .day, value: -1, to: Date()) ?? Date()
+    let laseWeekDate = Calendar.current.date(byAdding: .day, value: -7, to: Date()) ?? Date()
     
-    var dailyData: [DailyBoxOfficeData] = []
+    var dailyData: [BoxOfficeData] = []
     var subMovieData: [String:NaverSearchMovieData] = [:]
     
     var needImageMovieList: [String] = []
@@ -26,14 +27,15 @@ class  MainViewPresenter {
     
     func initial() -> Void {
         needImageMovieList = []
-        requestDailyData()
+//        requestDailyData()
+        requestWeeklyData()
 //        requestCompanyListData()
 //        requestCompanyInfoData("20173221") // 소니
 //        requestMovieInfoData("20210028") // 스파이더맨
     }
     
     // MARK: *FUNCTION*
-    func getMainTopItem() -> DailyBoxOfficeData? {
+    func getMainTopItem() -> BoxOfficeData? {
         if let item = dailyData.first {
             return item
         }
@@ -52,10 +54,36 @@ class  MainViewPresenter {
     // MARK: *SET DATA*
     func setDailyData(data: [DailyBoxOfficeList]) {
         if data.count > 0 {
-            var tempDailyData: [DailyBoxOfficeData] = []
+            var tempDailyData: [BoxOfficeData] = []
             
             for item in data {
-                var tempItem: DailyBoxOfficeData = DailyBoxOfficeData()
+                var tempItem: BoxOfficeData = BoxOfficeData()
+                
+                needImageMovieList.append(item.movieNm)
+                
+                tempItem.rank = item.rank
+                if item.rankOldAndNew == "NEW" {
+                    tempItem.rankOldAndNew = 1
+                }
+                tempItem.movieCd = item.movieCd
+                tempItem.movieName = item.movieNm
+                tempItem.openDate = CommonUtils.convertStringToDate(dateString: item.openDt, format: "yyyy-MM-dd")
+                tempItem.totalAudienceCount = Int(item.audiAcc) ?? 0
+                
+                tempDailyData.append(tempItem)
+            }
+            
+            dailyData.removeAll()
+            dailyData = tempDailyData.sorted(by: {$0.rank < $1.rank})
+        }
+    }
+    
+    func setWeeklyData(data: [WeeklyBoxOfficeList]) {
+        if data.count > 0 {
+            var tempDailyData: [BoxOfficeData] = []
+            
+            for item in data {
+                var tempItem: BoxOfficeData = BoxOfficeData()
                 
                 needImageMovieList.append(item.movieNm)
                 
@@ -149,6 +177,34 @@ class  MainViewPresenter {
                         print(dailyBoxOfficeData.boxOfficeResult.dailyBoxOfficeList)
                         
                         self.setDailyData(data: dailyBoxOfficeData.boxOfficeResult.dailyBoxOfficeList)
+                        
+                        self.requestCompanyInfoData(companyCode: "20173221") // 소니
+                    } catch {
+                        print(error)
+                    }
+                } FailError: { errorCode in
+                    print("OpenApiManager error \(errorCode)")
+                }
+        } else {
+            print("OpenApiManager param error")
+        }
+    }
+    
+    // 주간 박스오피스
+    func requestWeeklyData() {
+        
+        var parameter: RequestWeeklyBoxOffice = RequestWeeklyBoxOffice()
+        parameter.targetDt = CommonUtils.convertDateToString(date: laseWeekDate, format: "yyyyMMdd")
+        parameter.weekGb = "0"
+        
+        if let param = getParameterJson(parameter: parameter) {
+            OpenApiManager.sharedInstance
+                .requestWeeklyBoxOfficeList(Params: param, ServiceMode: .Weekly) { data in
+                    do {
+                        let weeklyBoxOfficeData = try JSONDecoder().decode(ResponceWeeklyBoxOffice.self, from: data)
+                        print(weeklyBoxOfficeData.boxOfficeResult.weeklyBoxOfficeList)
+                        
+                        self.setWeeklyData(data: weeklyBoxOfficeData.boxOfficeResult.weeklyBoxOfficeList)
                         
                         self.requestCompanyInfoData(companyCode: "20173221") // 소니
                     } catch {

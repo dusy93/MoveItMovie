@@ -101,12 +101,12 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
             cell.lb_rank.text = ""
             cell.iv_movie.image = UIImage()
+            cell.lb_rank.text = "\(indexPath.row+1)"
             
             guard let item = presenter?.dailyData[indexPath.row], let subItem = presenter?.subMovieData[item.movieName] else {
                 return cell
             }
             
-            cell.lb_rank.text = "\(indexPath.row+1)"
             cell.iv_movie.loadImage(subItem.imageName)
             
             return cell
